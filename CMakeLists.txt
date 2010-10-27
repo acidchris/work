@@ -16,4 +16,4 @@ project(work)
 
 # add directories for further search
 add_subdirectory(sgf)
-#add_subdirectory(somelib)
+add_subdirectory(testbed)
