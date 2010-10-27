@@ -5,18 +5,20 @@ set(INCLUDE_DIRS
    )
 
 # List all source files
-set(SOURCE_FILES
+set(PROPERTY_SYSTEM_FILES
     ./property_system/property_list.cpp
-   )
-
-# List all header files
-set(HEADER_FILES
     ./property_system/property_list.h
    )
 
+# Map them together
+set(SOURCE_FILES ${PROPERTY_SYSTEM_FILES})
+
+source_group("Property System" FILES ${PROPERTY_SYSTEM_FILES})
+
+set(MODULE_FILES ./CMakeLists.txt)
 
 # Set project options
 include_directories(${INCLUDE_DIRS})
 
 # Set the target
-add_library(sgf STATIC ${SOURCE_FILES} ${HEADER_FILES})
+add_library(sgf STATIC ${SOURCE_FILES} ${MODULE_FILES})
