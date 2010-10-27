@@ -1,6 +1,9 @@
 
 cmake_minimum_required(VERSION 2.6)
 
+# Only the basics
+set(CMAKE_SUPPRESS_REGENERATION true)
+
 # fetch environment variable and store internally
 set(OGRE_SDK_ROOT $ENV{OGRE_SDK})
 
