@@ -1,0 +1,19 @@
+
+cmake_minimum_required(VERSION 2.6)
+
+# fetch environment variable and store internally
+set(OGRE_SDK_ROOT $ENV{OGRE_SDK})
+
+# quick check if it exists (is used later for include directories)
+if (OGRE_SDK_ROOT)
+  message("OGRE_SDK environment variable mappend to: ${OGRE_SDK_ROOT}")
+elseif (NOT OGRE_SDK_ROOT) 
+  message("OGRE_SDK environment variable not set")
+endif ()
+
+# define the solution
+project(work)
+
+# add directories for further search
+add_subdirectory(sgf)
+#add_subdirectory(somelib)
