@@ -1,7 +1,7 @@
 # List all include directories used for the project
 set(INCLUDE_DIRS
-    .
-    ./property_system
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${OGRE_SDK_INCLUDES}
    )
 
 # List all source files
