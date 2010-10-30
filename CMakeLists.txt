@@ -7,6 +7,9 @@ if (WIN32)
   set(CMAKE_SUPPRESS_REGENERATION true)
 endif()
 
+# Just debug / release build targets
+set (CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE)
+
 # fetch environment variable and store internally
 set(OGRE_SDK_ROOT $ENV{OGRE_SDK})
 set(OGRE_SDK_INCLUDES ${OGRE_SDK_ROOT}/include/OGRE)
